@@ -1,0 +1,253 @@
+/* body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    @media screen and (max-width: 768px) {
+        background-color: #e0e0e0;  
+        
+    }
+} */
+:root{
+    --theme : rgb(0, 0, 0);
+    --maron : rgb(201, 58, 58);
+    --active-color : #000000;
+    --navbar-color : rgba(255, 255, 255, 1);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    background-image: url('./media/background.png');
+    background-size: cover;
+
+}
+h1,h2,h3{
+     font-family: "Special Gothic Expanded One", sans-serif;
+     font-weight: 400;
+}
+
+
+
+
+
+header{
+    width: 100%;
+    /* height: 10vh; */
+    background-color: var(--navbar-color);
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+.nav{
+    position : relative;
+    align-items: center;
+    justify-content: space-between;
+    display :flex;
+    flex-direction: row;
+    margin:0.5%;
+    padding: 1%;
+    width: 90%;
+}
+
+.logo{
+    padding :5px;
+    font-size: 2rem;
+    color:var(--theme);
+}
+.logo a{
+    text-decoration: none;
+    color : var(--theme);
+}
+.links{
+    display : flex;
+    justify-content:space-around;
+    gap : 20px;
+    align-items: center;
+    padding: 5px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.links li:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color : red;
+}
+
+.links a{
+    text-decoration: none;
+    color: black;
+}
+.links .active{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color : var(--active-color);
+    font-weight: 300;
+    text-decoration-color: var(--theme);
+}
+.nav-button{
+    text-decoration: none;
+   width : 6rem;
+   height : 2em;
+   /* padding: .2rem; */
+   background-color: var(--theme);
+   color : white;
+   font-size: large;
+   text-align: center;
+   border-radius:  2rem;
+   cursor: pointer;
+   line-height: 2rem;
+   /* border : var(--theme); */
+}
+
+.nav-button:hover{
+    color : var(--theme);
+    background-color: white;
+    border: 1px solid var(--theme);
+    border-radius: 2rem;
+}
+
+
+
+
+
+main{
+    position: relative;
+    width: 100%;
+    /* height: 82vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section{
+    margin-top: 5rem;
+    width: 80%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--theme);
+    padding: 2rem;
+}
+.hero-content h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+/* 
+.hero-content p::before{
+    content: "";
+    display: block;
+    height: 30rem;
+    width: auto;
+    display: flex;
+    background-image: url('../images/avatar3.png');
+    background-size: cover;
+    /* border-radius: 50%; */
+    /* margin-bottom: 1rem; */
+/* } */
+.hero-content img{
+    height: 30rem;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.hero-content p{
+    position: relative;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+.heading{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    width:auto;
+    margin-top: 3%;
+}
+
+.heading span{
+    display: block;
+    color: var(--maron);
+    font-size: 2.5rem;
+}
+
+.hero-content .images img{
+    height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+.hero-button{
+   text-decoration: none;
+   margin:2rem;
+   width: 10rem;
+   border-radius: 2rem;
+   padding: 1rem;
+   background-color: var(--theme);
+    color : white;
+}
+
+
+
+
+
+footer{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--theme);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color : white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-button{
+        display: none;
+    } 
+    .hero-section{
+        width: 100%;
+    }
+    .hero-content h2{
+        font-size: 1.5rem;
+    }
+    .hero-content p{
+        width: 90%;
+        font-size: 1rem;
+    }
+    /* .hero-content p::before{
+        height: 20rem;
+    } */
+     .hero-content img{
+        height: 20rem;
+     }
+}
