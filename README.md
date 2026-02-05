@@ -4,7 +4,7 @@ Web Design group assignment 2026
 ```
 Tanvir Rahman Tonoy
 Eitmam Ahmed Amio
-Bhupendra Dhapa 
+Bhupendra Thapa 
 Arpan
 ```
 
