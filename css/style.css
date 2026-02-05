@@ -145,8 +145,15 @@ main{
     position: relative;
     font-size: 1.2rem;
     text-align: left;
-    margin-bottom: 2rem;
-    width: 50%;
+    text-wrap: wrap;
+    margin: 2rem;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content p span{
+  color: var(--maron);
+  font-weight: 500;
 }
 
 .heading{
@@ -194,6 +201,17 @@ main{
     margin-top: 2rem;
 }
 
+.exercises-image.active{
+    width: 60%;
+    padding: 1.5rem;
+    background-color: whitesmoke;
+    height: auto;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-shadow: inset 0 0 0rem 1rem rgba(128,0,0,.2);
+
+
+}
 /* gallery Page  */
 
 :root{

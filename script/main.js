@@ -1,9 +1,9 @@
 console.log("Hello, World!");
 
 const imageUrls = [
-    './images/avatar1.png',
-    './images/avatar2.png',
-    './images/avatar3.png'
+    './media/avatar1.png',
+    './media/avatar2.png',
+    './media/avatar3.png'
 ];
 
 const image = document.querySelector('#avatar');
