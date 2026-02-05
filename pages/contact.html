@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=maps,marker"
+    defer
+></script>
     
 </head>
 <body>
     <header>
         <nav class="nav">
-            <div class="logo"><a href="./index.html">FITNIX</a></div>
+            <div class="logo"><a href="../index.html">FITNIX</a></div>
             <ul class = "links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
@@ -23,7 +28,146 @@
 <a href="./contact.html" class="nav-button">Fill Form</a>
         </nav> 
     </header>
-    <main>
+    <!-- <main> -->
+        <!-- I need to add a proper  -->
+  <main id="main-content">
+    <!-- Page Intro -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact FITNIX</h1>
+        <p>
+          Have questions about membership, classes, or personal training? Send us a message and we’ll get back to you.
+          This contact form is designed for layout and usability as required in the assessment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2 contact-grid">
+          <!-- Contact Details -->
+          <section class="card" aria-label="Contact details">
+            <h2 class="addMargin">Get in Touch</h2>
+            <p>
+              Reach out using the form or the details below. We welcome enquiries from beginners, returning members,
+              and anyone looking for a safe women-only training environment.
+            </p>
+
+            <ul class="contact-list">
+              <li><strong>Address:</strong> 185 Spring St, Melbourne VIC 3000</li>
+              <li><strong>Phone:</strong> (04 ) 0000 0000</li>
+              <li><strong>Email:</strong> hello@fitnix.example</li>
+              <li><strong>Hours:</strong> Mon–Fri 7:00 AM – 8:00 PM</li>
+            </ul>
+
+            <div class="mini-note">
+              <p><strong>Tip:</strong> For faster support, include your preferred training time and goals.</p>
+            </div>
+          </section>
+
+          <!-- Contact Form -->
+          <section class="card" aria-label="Contact form">
+            <h2 class="addMargin">Send a Message</h2>
+
+            <!-- NOTE: "action" can remain # for prototype; layout is what matters -->
+            <form class="contact-form" action="#" method="post">
+              <div class="form-row">
+                <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="e.g., Tanvir Genius"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g., tanvir@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g., 04xx xxx xxx"
+                />
+              </div>
+
+              <div class="form-row">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="membership">Membership enquiry</option>
+                  <option value="trial">Book a free trial</option>
+                  <option value="classes">Group classes</option>
+                  <option value="pt">Personal training</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <fieldset class="form-row">
+                <legend>Preferred Training Goal</legend>
+                <div class="radio-group">
+                  <label><input type="radio" name="goal" value="weightloss" checked /> Weight loss</label>
+                  <label><input type="radio" name="goal" value="strength" /> Strength</label>
+                  <label><input type="radio" name="goal" value="fitness" /> General fitness</label>
+                  <label><input type="radio" name="goal" value="confidence" /> Confidence & routine</label>
+                </div>
+              </fieldset>
+
+              <div class="form-row">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us what you’re looking for (classes, schedule, goals)..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-row checkbox-row">
+                <label>
+                  <input type="checkbox" name="consent" required />
+                  I agree that FITNIX may contact me regarding this enquiry.
+                </label>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Submit Enquiry</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional Map Placeholder -->
+    <section class="section section-alt" aria-label="Location map">
+      <div class="container">
+        <header class="section-header">
+          <h2>Find Us</h2>
+          <p>Map area included as a layout component (replace with embedded map if desired).</p>
+        </header>
+
+        <div class="map-placeholder">
+            <gmp-map
+    center="37.4220656,-122.0840897"
+    zoom="10"
+    map-id="DEMO_MAP_ID"
+    style="height: 500px"></gmp-map>
+          <p>Map Placeholder (Embed Google Map here if allowed)</p>
+        </div>
+      </div>
+    </section>
     </main>
     <footer>
         <div class="footer-content">

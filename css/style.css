@@ -435,6 +435,113 @@ color: white;
 }
 
 
+/* Contact list styling */
+.contact-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact-list li {
+  padding: 0.4rem 0;
+  color: var(--muted-text);
+}
+
+.mini-note {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background-color: var(--accent-color);
+}
+
+/* Form styling */
+.contact-form {
+  margin-top: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+  color: var(--theme);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0.75rem;
+  border: 1px solid #dddddd;
+  border-radius: var(--radius);
+  outline: none;
+  transition: var(--transition);
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* Fieldset / radio group */
+fieldset.form-row {
+  border: 1px solid #dddddd;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: var(--theme);
+}
+
+.radio-group {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  color: var(--muted-text);
+}
+
+/* Checkbox row */
+.checkbox-row label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-weight: 400;
+  color: var(--muted-text);
+}
+
+/* Map placeholder */
+.map-placeholder {
+  background-color: #ffffff;
+  border: 1px dashed #cccccc;
+  border-radius: var(--radius);
+  padding: 3rem 1rem;
+  text-align: center;
+    display: none;
+  color: var(--muted-text);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .radio-group {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* We need to add css for other pages on top of this portion as the footer will be the same for all pages | Tonoy |  */
 
