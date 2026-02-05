@@ -1,13 +1,4 @@
-/* body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    @media screen and (max-width: 768px) {
-        background-color: #e0e0e0;  
-        
-    }
-} */
+/* Starting date : 04 FEB 2026 | Tanvir Tonoy|  */
 :root{
     --theme : rgb(0, 0, 0);
     --maron : rgb(201, 58, 58);
@@ -25,7 +16,6 @@
 body{
     font-family: "Roboto",sans-serif;
     font-weight: 100;
-    background-image: url('./media/background.png');
     background-size: cover;
 
 }
@@ -40,9 +30,7 @@ h1,h2,h3{
 
 header{
     width: 100%;
-    /* height: 10vh; */
     background-color: var(--navbar-color);
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,8 +50,9 @@ header{
 
 .logo{
     padding :5px;
-    font-size: 2rem;
     color:var(--theme);
+    font-size: 2.5rem;
+    font-weight: 900;
 }
 .logo a{
     text-decoration: none;
@@ -100,7 +89,6 @@ header{
     text-decoration: none;
    width : 6rem;
    height : 2em;
-   /* padding: .2rem; */
    background-color: var(--theme);
    color : white;
    font-size: large;
@@ -108,7 +96,6 @@ header{
    border-radius:  2rem;
    cursor: pointer;
    line-height: 2rem;
-   /* border : var(--theme); */
 }
 
 .nav-button:hover{
@@ -125,16 +112,15 @@ header{
 main{
     position: relative;
     width: 100%;
-    /* height: 82vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 5rem;
 }
 
 .hero-section{
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     width: 80%;
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,22 +135,10 @@ main{
     color: var(--theme);
     padding: 2rem;
 }
-.hero-content h2{
+.hero-content h1{
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-/* 
-.hero-content p::before{
-    content: "";
-    display: block;
-    height: 30rem;
-    width: auto;
-    display: flex;
-    background-image: url('../images/avatar3.png');
-    background-size: cover;
-    /* border-radius: 50%; */
-    /* margin-bottom: 1rem; */
-/* } */
 .hero-content img{
     height: 30rem;
     /* border-radius: 50%; */
@@ -186,6 +160,7 @@ main{
     height:auto;
     width:auto;
     margin-top: 3%;
+    text-transform: uppercase;
 }
 
 .heading span{
@@ -206,13 +181,128 @@ main{
    width: 10rem;
    border-radius: 2rem;
    padding: 1rem;
-   background-color: var(--theme);
+   background-color: var(--maron);
     color : white;
+    transition: all 0.3s ease;
+}
+.hero-button:hover{
+    color : var(--maron);
+    background-color: white;
+    border: 1px solid var(--maron);
+    border-radius: 2rem;
+}
+.exercises-image{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+:root{
+  --container: 1100px;
+  --gap: .5rem;
+  --radius: 16px;
+  --card-bg: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,0.28);
+}
+
+
+ .gallery-intro{
+    margin-top: 2rem;
+     text-align: center;
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+}
+
+.gallery-intro h1{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    color: var(--maron);
+}
+.gallery-section{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 40px 18px;
+}
+
+.gallery-section h2{
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin: 0 0 14px;
+  letter-spacing: 0.3px;;
+  width: 100%;
+  text-align: right;
+  background-color: var(--maron);
+  color: white;
+  padding: 1.5rem;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  align-items: stretch;
+}
+
+/* Card */
+.gallery-grid figure{
+  margin: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.gallery-grid img{
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;      
+  object-fit: cover;        
+  background: transparent;  
+  transition: transform .22s ease, filter .22s ease;
+}
+
+.gallery-grid figcaption{
+  padding: 12px 14px 14px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  opacity: 1;
+  color: var(--theme);
+}
+
+.gallery-grid figure:hover,
+.gallery-grid figure:focus-within{
+  /* transform: translateY(-4px); */
+  border-color: rgba(255,255,255,0.22);
+  /* box-shadow: 0 14px 36px rgba(0,0,0,0.1); */
+  /* border: 1px solid white; */
+}
+
+.gallery-grid figure:hover img,
+.gallery-grid figure:focus-within img{
+  transform: scale(1.04);
+  filter: saturate(1.05) contrast(1.03);
+}
+
+.gallery-grid a{
+  display: block;
+  outline: none;
 }
 
 
 
 
+
+/* We need to add css for other pages on top of this portion as the footer will be the same for all pages | Tonoy |  */
 
 footer{
     width: 100%;
@@ -225,8 +315,19 @@ footer{
     color : white;
 }
 
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+}
+
 
 @media screen and (max-width: 768px) {
+    main{
+        padding-top: 6rem;
+    }
     .nav{
         flex-direction: column;
         gap: 10px;
@@ -237,7 +338,7 @@ footer{
     .hero-section{
         width: 100%;
     }
-    .hero-content h2{
+    .hero-content h1{
         font-size: 1.5rem;
     }
     .hero-content p{
@@ -249,5 +350,20 @@ footer{
     } */
      .hero-content img{
         height: 20rem;
+     }
+
+      .gallery-section{ 
+        padding: 28px 14px; 
+    }
+        .gallery-section h2{
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+        }
+    .gallery-grid{ gap: 14px; }
+
+    
+     .footer-content{
+        width: 90%;
      }
 }

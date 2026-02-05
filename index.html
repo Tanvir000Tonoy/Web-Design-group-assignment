@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <script src="./script/main.js" defer></script>
 </head>
 <body>
     <header>
-        <nav class="nav">
-            <h1 class="logo"><a href="./index.html">FITNIX</a></h1>
+        <nav class="nav" aria-label="Primary navigation">
+             <div class="logo"><a href="./index.html">FITNIX</a></div>
             <ul class = "links">
                 <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./pages/gallery.html">Gallery</a></li>
@@ -27,8 +27,9 @@
     <main>
         <section class="hero-section">
             <div class="hero-content">
-                <h2 class="heading"> TRANSFORM YOUR FITNESS JOURNEY
-                    WITH <span>FITNIX</span></h2>
+                <!-- <h2 class="heading"> TRANSFORM YOUR FITNESS JOURNEY -->
+                    <!-- WITH <span>FITNIX</span></h2> -->
+                    <h1 class="heading"> Transform your fitness journey with <span>FITNIX</span></h1>
                     <img id="avatar" src="./images/avatar1.png" alt="Fitness Image 1">
                     <!-- <div class="images">
                       
@@ -40,12 +41,15 @@
               No comparison games. Just movement, discipline, and a community that genuinely supports each other.</p>
                 <a href="./pages/contact.html" class="hero-button">Get Started</a>
             </div>
+            <img src="./images/exercise.png" alt="Exercise Image" class="exercises-image">
         </section>
         
     </main>
     <footer>
-        <p>We respect everyone's privacy. This website is a combined effort of Tonoy, Etmam, Arpan & Bhupendra (Group 03). we are students and doing this for our group assignment. No commercial use intended.<br><br> </p>
-        <p>&copy; 2026 All rights reserved</p>
+        <div class="footer-content">
+            <p>Developed by Tonoy, Eitmam, Arpan & Bhupendra (Group 03). This is a student project for educational purposes only. No commercial use intended.</p>
+            <p>&copy; 2026 FITNIX. All rights reserved.</p>
+        </div>
 
     </footer>
 </body>
