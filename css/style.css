@@ -345,7 +345,9 @@ main{
     margin: 1rem;
     /* background-color: red; */
 }
-
+#hideme{
+    display: none;
+}
 
 .grid {
   display: grid;
@@ -409,6 +411,7 @@ main{
   text-decoration: none;
   font-weight: 500;
   transition: all ease .2s;
+  border: none;
 }
 
 .btn-primary {
@@ -443,14 +446,13 @@ color: white;
 
 .contact-list li {
   padding: 0.4rem 0;
-  color: var(--muted-text);
+  color: var(--theme);
 }
 
 .mini-note {
   margin-top: 1.2rem;
   padding: 1rem;
   border-radius: var(--radius);
-  background-color: var(--accent-color);
 }
 
 /* Form styling */
@@ -478,14 +480,14 @@ textarea {
   border: 1px solid #dddddd;
   border-radius: var(--radius);
   outline: none;
-  transition: var(--transition);
+  transition: all ease .2s;
   background-color: #ffffff;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--primary-color);
+  border-color: var(--theme);
 }
 
 /* Fieldset / radio group */
@@ -512,7 +514,7 @@ legend {
   align-items: center;
   gap: 0.5rem;
   font-weight: 400;
-  color: var(--muted-text);
+  color: var(--theme);
 }
 
 /* Checkbox row */
@@ -521,7 +523,7 @@ legend {
   align-items: flex-start;
   gap: 0.6rem;
   font-weight: 400;
-  color: var(--muted-text);
+  color: var(--theme);
 }
 
 /* Map placeholder */
@@ -532,7 +534,7 @@ legend {
   padding: 3rem 1rem;
   text-align: center;
     display: none;
-  color: var(--muted-text);
+  color: var(--theme);
 }
 
 /* Responsive improvements */
