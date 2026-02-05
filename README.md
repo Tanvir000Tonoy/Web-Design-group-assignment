@@ -1,4 +1,11 @@
-`Web-Design-group-assignment`
+Web Design group assignment 2026 
 
-[Assignment link](./requirements/3690977.pdf)
+- Group Members :
+```
+Tanvir Rahman Tonoy
+Eitmam Ahmed Amio
+Bhupendra Dhapa 
+Arpan
+```
 
+[View This Website](https://tanvir000tonoy.github.io/Web-Design-group-assignment/)
