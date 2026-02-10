@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <script src="./script/main.js" defer></script>
+    <!-- <script src="./script/main.js" defer></script> -->
 </head>
 <body>
     <header>
@@ -18,12 +18,12 @@
              <div class="logo"><a href="./index.html">FITNIX</a></div>
             <ul class = "links">
                 <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./pages/gallery.html">Gallery</a></li>
-                <li><a href="./pages/about.html" >About us</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
+                <li><a href="./html/gallery.html">Gallery</a></li>
+                <li><a href="./html/about.html" >About us</a></li>
+                <li><a href="./html/contact.html">Contact</a></li>
             </ul>
 
-            <a class="nav-button" href="./pages/contact.html">Join Now</a>
+            <a class="nav-button" href="./html/contact.html">Join Now</a>
         </nav> 
     </header>
     <main>
@@ -41,7 +41,7 @@
                 <p>FITNIX is a fitness club exclusively for <span>women</span> who want to train in an environment that feels safe, 
               comfortable, and motivating. No judgment. No pressure to look a certain way. 
               No comparison games. Just movement, discipline, and a community that genuinely supports each other.</p>
-                <a href="./pages/contact.html" class="hero-button">Get Started</a>
+                <a href="./html/contact.html" class="hero-button">Get Started</a>
             </div>
             <img src="./media/exercise.png" alt="Exercise Image" class="exercises-image">
         </section>
@@ -54,5 +54,31 @@
         </div>
 
     </footer>
+
+    <script>
+        console.log("Hello, World!");
+
+        const imageUrls = [
+            './media/avatar1.png',
+            './media/avatar2.png',
+            './media/avatar3.png'
+        ];
+
+        const image = document.querySelector('#avatar');
+        let currentIndex = 0;
+
+        function changeImage() {
+            image.style.opacity = '0';
+            
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % imageUrls.length;
+                image.src = imageUrls[currentIndex];
+                image.style.opacity = '1';
+            }, 1000);
+        }
+
+        image.style.transition = 'opacity 0.5s ease-in-out';
+        setInterval(changeImage, 5000);
+    </script>
 </body>
 </html>
